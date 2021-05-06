@@ -107,7 +107,6 @@ alias dclf="docker-compose logs -f"
 alias dcr="docker-compose run"
 alias psql="docker run --rm -it postgres psql"
 alias update="sudo apt update && sudo apt upgrade"
-alias config='/usr/bin/git --git-dir=/home/mahesh/.cfg/ --work-tree=/home/mahesh'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -120,8 +119,6 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
 sudo /etc/init.d/dbus start &> /dev/null
 
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre"
-
 export PATH="$PATH:/opt/dev-nginx/bin"
 
 export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk/bin:$PATH"
@@ -129,3 +126,9 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/python@3.8/bin:$PATH"
 export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/python@3.8/lib"
 export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/python@3.8/include"
 export PATH="/opt/firefox/firefox:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openjdk/include"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mahesh/.sdkman"
+[[ -s "/home/mahesh/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mahesh/.sdkman/bin/sdkman-init.sh"
