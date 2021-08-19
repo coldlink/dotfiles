@@ -128,6 +128,7 @@ export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/python@3.8/include"
 export PATH="/opt/firefox/firefox:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/openjdk/include"
+export GPG_TTY=$(tty)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/mahesh/.sdkman"
